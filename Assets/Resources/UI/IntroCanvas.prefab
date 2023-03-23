@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 501028159177108879}
   - component: {fileID: 3374841838974841440}
   - component: {fileID: 4609967008042644148}
+  - component: {fileID: 2053858456604543791}
   m_Layer: 5
   m_Name: IntroCanvas
   m_TagString: Untagged
@@ -331,3 +332,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2053858456604543791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8136966414540763034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abbeb8f46a207e3469792db9b94717c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  introText: {fileID: 7808270588608495676}
+  introTextCollection:
+  - bfdshkjhfjks
+  - sdgsdsgfs
+  - sfgfgssfg
+  textDisplayTime: 5
