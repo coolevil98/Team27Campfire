@@ -9,6 +9,7 @@ public class IntroText : MonoBehaviour
 {
     #region Variables
     public TMP_Text introText;
+    public GameObject textHolder;
     public List<string> introTextCollection = new List<string>();
     public float textDisplayTime;
     private float storeTime;
@@ -28,8 +29,15 @@ public class IntroText : MonoBehaviour
         if(textDisplayTime <= - 0)
         {
             currentText++;
-            introText.text = introTextCollection[currentText];
-            textDisplayTime = storeTime;
+            if(currentText>= introTextCollection.Count)
+            {
+                Destroy(textHolder);
+            }
+            if (currentText < introTextCollection.Count)
+            {
+                introText.text = introTextCollection[currentText];
+                textDisplayTime = storeTime;
+            }
             //if list reaches end then after one more timer destory the canvas to reduce load
         }
     }
