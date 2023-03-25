@@ -486,9 +486,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2053858456604543791, guid: 1b527c080b2106c47ae356c43e7fec63,
         type: 3}
+      propertyPath: introTextCollection.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053858456604543791, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
       propertyPath: textHolder
       value: 
       objectReference: {fileID: 597194708}
+    - target: {fileID: 2053858456604543791, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
+      propertyPath: introTextCollection.Array.data[0]
+      value: You are at a campsite on a secluded beach with your friends
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053858456604543791, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
+      propertyPath: introTextCollection.Array.data[1]
+      value: You are all sitting in a circle around the fire relaxing on reclined
+        chairs
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053858456604543791, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
+      propertyPath: introTextCollection.Array.data[2]
+      value: Your tents surround your circle lit up by the warm fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053858456604543791, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
+      propertyPath: textDisplayTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053858456604543791, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
+      propertyPath: introTextCollection.Array.data[3]
+      value: 'When you feel it''s time to get off your comfy camping recliner '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053858456604543791, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
+      propertyPath: introTextCollection.Array.data[4]
+      value: and make your way to bed, please turn off and remove your headset
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053858456604543791, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
+      propertyPath: introTextCollection.Array.data[5]
+      value: Keep your eyes closed to avoid any unnecessary light exposure before
+        sleep
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053858456604543791, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
+      propertyPath: introTextCollection.Array.data[6]
+      value: Now please close your eyes
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b527c080b2106c47ae356c43e7fec63, type: 3}
 --- !u!1 &2112550167
