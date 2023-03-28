@@ -93,8 +93,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -345,8 +345,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introText: {fileID: 7808270588608495676}
+  textHolder: {fileID: 0}
   introTextCollection:
-  - bfdshkjhfjks
-  - sdgsdsgfs
-  - sfgfgssfg
+  - You are at a campsite on a secluded beach with your friends
+  - You are all sitting in a circle around the fire relaxing on reclined chairs
+  - Your tents surround your circle lit up by the warm fire
+  - 'When you feel it''s time to get off your comfy camping recliner '
+  - and make your way to bed, please turn off and remove your headset
+  - Keep your eyes closed to avoid any unnecessary light exposure before sleep
+  - Now please close your eyes
   textDisplayTime: 5
