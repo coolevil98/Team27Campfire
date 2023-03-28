@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introText: {fileID: 7808270588608495676}
-  textHolder: {fileID: 0}
+  textHolder: {fileID: 8136966414540763034}
   introTextCollection:
   - You are at a campsite on a secluded beach with your friends
   - You are all sitting in a circle around the fire relaxing on reclined chairs
