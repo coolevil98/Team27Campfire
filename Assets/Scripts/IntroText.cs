@@ -46,7 +46,6 @@ public class IntroText : MonoBehaviour
                 introText.CrossFadeAlpha(1f, 1f, false);
                 fadeOccur = true;
             }
-            //if list reaches end then after one more timer destory the canvas to reduce load
         }
     }
 }
