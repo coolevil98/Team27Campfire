@@ -14,6 +14,7 @@ public class IntroText : MonoBehaviour
     public float textDisplayTime;
     private float storeTime;
     private int currentText = 0;
+    private bool fadeOccur=true;
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,12 @@ public class IntroText : MonoBehaviour
     void Update()
     {
         textDisplayTime -= Time.deltaTime;
-        if(textDisplayTime <= - 0)
+        if(fadeOccur && textDisplayTime <= 2)
+        {
+            introText.CrossFadeAlpha(0f, 2f, false);
+            fadeOccur = false;
+        }
+        if(textDisplayTime <=  0)
         {
             currentText++;
             if(currentText>= introTextCollection.Count)
@@ -37,6 +43,8 @@ public class IntroText : MonoBehaviour
             {
                 introText.text = introTextCollection[currentText];
                 textDisplayTime = storeTime;
+                introText.CrossFadeAlpha(1f, 1f, false);
+                fadeOccur = true;
             }
             //if list reaches end then after one more timer destory the canvas to reduce load
         }
