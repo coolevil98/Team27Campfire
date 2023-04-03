@@ -15,6 +15,11 @@ public class IntroText : MonoBehaviour
     private float storeTime;
     private int currentText = 0;
     private bool fadeOccur=true;
+
+    //
+    //assign 
+    [Tooltip("Set particle system to not play on awake")]
+    public ParticleSystem lightSystem;
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -37,6 +42,7 @@ public class IntroText : MonoBehaviour
             currentText++;
             if(currentText>= introTextCollection.Count)
             {
+                lightSystem.Play();
                 Destroy(textHolder);
             }
             if (currentText < introTextCollection.Count)
