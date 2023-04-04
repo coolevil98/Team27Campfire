@@ -242,6 +242,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1165805059494023847, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165805059494023847, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1796835801084974687, guid: 1b527c080b2106c47ae356c43e7fec63,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -281,6 +291,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.wordCount
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7808270588608495676, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7808270588608495676, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7808270588608495676, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7808270588608495676, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7808270588608495676, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7808270588608495676, guid: 1b527c080b2106c47ae356c43e7fec63,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 514
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b527c080b2106c47ae356c43e7fec63, type: 3}
