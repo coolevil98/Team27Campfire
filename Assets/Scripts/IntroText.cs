@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Linq;
+using Liminal.SDK.VR;
+using Liminal.SDK.VR.Input;
 
 public class IntroText : MonoBehaviour
 {
@@ -20,7 +22,14 @@ public class IntroText : MonoBehaviour
     //assign 
     [Tooltip("Set particle system to not play on awake")]
     public ParticleSystem lightSystem;
+    public GameObject fire;
     #endregion
+
+    void Awake()
+    {
+        fire.SetActive(false);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,16 +41,17 @@ public class IntroText : MonoBehaviour
     void Update()
     {
         textDisplayTime -= Time.deltaTime;
-        if(fadeOccur && textDisplayTime <= 2)
+        if (fadeOccur && textDisplayTime <= 2)
         {
             introText.CrossFadeAlpha(0f, 2f, false);
             fadeOccur = false;
         }
-        if(textDisplayTime <=  0)
+        if (textDisplayTime <=  0)
         {
             currentText++;
-            if(currentText>= introTextCollection.Count)
+            if (currentText >= introTextCollection.Count)
             {
+                fire.SetActive(true);
                 lightSystem.Play();
                 Destroy(textHolder);
             }
