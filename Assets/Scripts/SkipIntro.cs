@@ -23,6 +23,7 @@ public class SkipIntro : MonoBehaviour
             introCanvas.SetActive(false);
             fire.SetActive(true);
             lightSystem.Play();
+            FindObjectOfType<SSoundManager>().Play("fireplaceholder");
         }
     }
 }

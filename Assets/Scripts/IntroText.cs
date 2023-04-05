@@ -53,6 +53,7 @@ public class IntroText : MonoBehaviour
             {
                 fire.SetActive(true);
                 lightSystem.Play();
+                FindObjectOfType<SSoundManager>().Play("fireplaceholder");
                 Destroy(textHolder);
             }
             if (currentText < introTextCollection.Count)
