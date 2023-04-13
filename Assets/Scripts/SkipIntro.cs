@@ -24,6 +24,7 @@ public class SkipIntro : MonoBehaviour
             fire.SetActive(true);
             lightSystem.Play();
             FindObjectOfType<SSoundManager>().Play("fireplaceholder");
+            FindObjectOfType<SSoundManager>().Play("oceanplaceholder");
         }
     }
 }

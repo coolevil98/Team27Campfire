@@ -56,6 +56,7 @@ public class IntroText : MonoBehaviour
                 lightSystem.GetComponent<DimFire>().FireStarted();
                 lightSystem.Play();
                 FindObjectOfType<SSoundManager>().Play("fireplaceholder");
+                FindObjectOfType<SSoundManager>().Play("oceanplaceholder");
                 Destroy(textHolder);
             }
             if (currentText < introTextCollection.Count)

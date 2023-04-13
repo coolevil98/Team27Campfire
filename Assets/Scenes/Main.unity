@@ -456,8 +456,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: fireplaceholder
-    sound: {fileID: 8300000, guid: 209d9bf9a9c663c4da19261f73b230de, type: 3}
-    volume: 0.2
+    sound: {fileID: 8300000, guid: f1a4f0867f64c0546a49277d83bfe5fc, type: 3}
+    volume: 0.25
+    pitch: 1
+    source: {fileID: 0}
+  - name: oceanplaceholder
+    sound: {fileID: 8300000, guid: e1ac4998a3b91e44991ec1a1d131d6d7, type: 3}
+    volume: 0.016
     pitch: 1
     source: {fileID: 0}
 --- !u!1 &836775627
@@ -830,12 +835,6 @@ MonoBehaviour:
   m_Script: {fileID: -1848150265, guid: a80148f7c24f27741a9721c40a216ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1247766843 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1078567719}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1277935233
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,7 +979,6 @@ Transform:
   - {fileID: 2112550169}
   - {fileID: 1931348411}
   - {fileID: 692856128}
-  - {fileID: 1247766843}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -993,12 +991,6 @@ GameObject:
 --- !u!1 &1800896811 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 340899909667202592, guid: 0f93607d3aa1313438bb91ad54b08ffb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1078567719}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1800896813 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
     type: 3}
   m_PrefabInstance: {fileID: 1078567719}
   m_PrefabAsset: {fileID: 0}
