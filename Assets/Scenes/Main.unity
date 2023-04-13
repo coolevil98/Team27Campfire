@@ -465,6 +465,11 @@ MonoBehaviour:
     volume: 0.016
     pitch: 1
     source: {fileID: 0}
+  - name: voiceplaceholder
+    sound: {fileID: 8300000, guid: e1ac4998a3b91e44991ec1a1d131d6d7, type: 3}
+    volume: 0.016
+    pitch: 1
+    source: {fileID: 0}
 --- !u!1 &836775627
 GameObject:
   m_ObjectHideFlags: 0
