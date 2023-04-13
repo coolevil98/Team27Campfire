@@ -247,11 +247,6 @@ PrefabInstance:
       propertyPath: fire
       value: 
       objectReference: {fileID: 1584762944}
-    - target: {fileID: 1165805059494023847, guid: 1b527c080b2106c47ae356c43e7fec63,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 14
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b527c080b2106c47ae356c43e7fec63, type: 3}
 --- !u!1 &465664631
