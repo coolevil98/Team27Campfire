@@ -7,6 +7,7 @@ public class DimFire : MonoBehaviour
     public ParticleSystem emberParticles;
 
     private float timer;
+    private bool isFire=false;
     
     void Start()
     {
@@ -16,7 +17,10 @@ public class DimFire : MonoBehaviour
     void Update()
     {
         //Timer that updates
-        timer += Time.deltaTime;
+        if (isFire)
+        {
+            timer += Time.deltaTime;
+        }
 
         //Fire will dim 60 seconds after game starts
         if (timer >= 60.0f) 
@@ -37,5 +41,10 @@ public class DimFire : MonoBehaviour
             gradient.SetKeys(colorKeys, alphaKeys);
             colorOverLifetime.color = gradient;
         }
+    }
+
+    public void FireStarted()
+    {
+        isFire = true;
     }
 }

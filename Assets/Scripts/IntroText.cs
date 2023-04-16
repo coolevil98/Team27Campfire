@@ -23,6 +23,7 @@ public class IntroText : MonoBehaviour
     [Tooltip("Set particle system to not play on awake")]
     public ParticleSystem lightSystem;
     public GameObject fire;
+    public GameObject testing;
     #endregion
 
     void Awake()
@@ -52,7 +53,9 @@ public class IntroText : MonoBehaviour
             if (currentText >= introTextCollection.Count)
             {
                 fire.SetActive(true);
+                lightSystem.GetComponent<DimFire>().FireStarted();
                 lightSystem.Play();
+                FindObjectOfType<SSoundManager>().Play("fireplaceholder");
                 Destroy(textHolder);
             }
             if (currentText < introTextCollection.Count)
