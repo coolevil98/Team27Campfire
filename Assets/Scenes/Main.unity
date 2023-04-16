@@ -1059,11 +1059,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireParticles: {fileID: 1448848461}
-  emRate: 50
+  emRate: 5
   timeToChangeInSec: 10
-  newRate1: 25
-  newRate2: 10
-  newRate3: 5
+  newRate1: 4
+  newRate2: 3
+  newRate3: 2
 --- !u!1 &1851262159
 GameObject:
   m_ObjectHideFlags: 0

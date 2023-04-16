@@ -5,7 +5,6 @@ using UnityEngine;
 public class NumOfPart : MonoBehaviour
 {
     public ParticleSystem fireParticles;
-    private float timer = 0f;
     public float emRate;
     public float timeToChangeInSec;
     public float newRate1;
@@ -21,7 +20,6 @@ public class NumOfPart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         var emission = fireParticles.emission;
         emission.rateOverTime = emRate;
     }
