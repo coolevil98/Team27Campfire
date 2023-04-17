@@ -22,6 +22,7 @@ public class SkipIntro : MonoBehaviour
         {
             introCanvas.SetActive(false);
             fire.SetActive(true);
+            lightSystem.GetComponent<DimFire>().FireStarted();
             lightSystem.Play();
             FindObjectOfType<SSoundManager>().Play("fireplaceholder");
         }

@@ -4,14 +4,37 @@ using UnityEngine;
 
 public class DimFire : MonoBehaviour
 {
-    public ParticleSystem emberParticles;
+    public Color emberColour = new Color(1.0f, 0.6f, 0.0f, 1.0f);
+    
+    private ParticleSystem emberParticles;
+    public float minVPercentOfMaxV = 0.33333333f;
+    public Vector2[] velocities = new Vector2[2];
+    private int velocitiesIndex;
+    private float vel;
+    private float velTimerDif;
+
+    public Vector2[] alphas = new Vector2[2];
+    private int alphasIndex;
+    private float alpha;
+    private float alphasDif;
 
     private float timer;
-    private bool isFire=false;
+  
+    private bool isFire = false;
+
     
     void Start()
     {
-        timer = 0f;
+        emberParticles = gameObject.GetComponent<ParticleSystem>();
+        var main = emberParticles.main;
+        main.startSpeed = new ParticleSystem.MinMaxCurve(velocities[velocitiesIndex].x * minVPercentOfMaxV, velocities[velocitiesIndex].x);
+        main.startColor = emberColour;
+
+        velTimerDif = velocities[velocitiesIndex + 1].y - velocities[velocitiesIndex].y;
+        velocitiesIndex++;
+
+        alphasDif = alphas[alphasIndex + 1].y - alphas[alphasIndex].y;
+        alphasIndex++;
     }
 
     void Update()
@@ -22,7 +45,22 @@ public class DimFire : MonoBehaviour
             timer += Time.deltaTime;
         }
 
-        //Fire will dim 60 seconds after game starts
+        if (velocitiesIndex < velocities.Length)
+        {
+            Velocity();
+        }
+
+        if (alphasIndex < alphas.Length)
+        {
+            Transparency();
+        }
+
+        print(timer);
+        print(alpha);
+
+
+
+        /*Fire will dim 60 seconds after game starts
         if (timer >= 60.0f) 
         {
             Color orangeColor = new Color(1f, 0.5f, 0f, 1f);
@@ -40,7 +78,35 @@ public class DimFire : MonoBehaviour
             alphaKeys[1].time = 1.0f;
             gradient.SetKeys(colorKeys, alphaKeys);
             colorOverLifetime.color = gradient;
+        }*/
+
+    }
+
+    public void Velocity()
+    {
+        vel = velocities[velocitiesIndex - 1].x + (velocities[velocitiesIndex].x - velocities[velocitiesIndex - 1].x) * (timer - velocities[velocitiesIndex - 1].y) / velTimerDif;
+        if (timer >= velocities[velocitiesIndex].y)
+        {
+            velocitiesIndex++;
+            velTimerDif = velocities[velocitiesIndex].y - velocities[velocitiesIndex - 1].y;
         }
+
+        var main = emberParticles.main;
+        main.startSpeed = new ParticleSystem.MinMaxCurve(vel * minVPercentOfMaxV, vel);
+    }
+
+    public void Transparency()
+    {
+        alpha = alphas[alphasIndex - 1].x + (alphas[alphasIndex].x - alphas[alphasIndex - 1].x) * (timer - alphas[alphasIndex - 1].y) / alphasDif;
+        if (timer >= alphas[alphasIndex].y)
+        {
+            alphasIndex++;
+            alphasDif = alphas[alphasIndex].y - alphas[alphasIndex - 1].y;
+        }
+
+        var main = emberParticles.main;
+        emberColour.a = alpha;
+        main.startColor = emberColour;
     }
 
     public void FireStarted()
