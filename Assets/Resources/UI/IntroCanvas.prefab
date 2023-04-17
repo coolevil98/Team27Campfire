@@ -338,6 +338,14 @@ MonoBehaviour:
   - and make your way to bed, please turn off and remove your headset
   - Keep your eyes closed to avoid any unnecessary light exposure before sleep
   - Now please close your eyes
+  introTextLength:
+  - 8
+  - 7
+  - 6
+  - 6
+  - 7
+  - 7
+  - 5
   textDisplayTime: 8
   lightSystem: {fileID: 0}
   fire: {fileID: 0}
