@@ -13,8 +13,8 @@ public class IntroText : MonoBehaviour
     public TMP_Text introText;
     public GameObject textHolder;
     public List<string> introTextCollection = new List<string>();
+    public List<float> introTextLength = new List<float>();
     public float textDisplayTime;
-    private float storeTime;
     private int currentText = 0;
     private bool fadeOccur=true;
 
@@ -34,8 +34,8 @@ public class IntroText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        storeTime = textDisplayTime;
         introText.text = introTextCollection[currentText];
+        textDisplayTime = introTextLength[currentText];
     }
 
     // Update is called once per frame
@@ -62,7 +62,7 @@ public class IntroText : MonoBehaviour
             if (currentText < introTextCollection.Count)
             {
                 introText.text = introTextCollection[currentText];
-                textDisplayTime = storeTime;
+                textDisplayTime = introTextLength[currentText];
                 introText.CrossFadeAlpha(1f, 1f, false);
                 fadeOccur = true;
             }

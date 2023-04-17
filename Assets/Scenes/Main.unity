@@ -648,22 +648,22 @@ PrefabInstance:
     - target: {fileID: 2983168549640945882, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.g
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2983168549640945882, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2983168549640945882, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2983168549640945882, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2983168549640945882, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
@@ -688,12 +688,12 @@ PrefabInstance:
     - target: {fileID: 2983168549640945882, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 1
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2983168549640945882, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2983168549640945882, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
@@ -728,7 +728,7 @@ PrefabInstance:
     - target: {fileID: 2983168549640945882, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.ctime0
-      value: 63222
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2983168549640945882, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
@@ -1011,7 +1011,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48146fd4c46242a4b9ddd66ec1b33f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emberParticles: {fileID: 1448848461}
+  emberColour: {r: 1, g: 0.6, b: 0, a: 1}
+  minVPercentOfMaxV: 0.33333334
+  velocities:
+  - {x: 3, y: 0}
+  - {x: 1, y: 60}
+  alphas:
+  - {x: 1, y: 0}
+  - {x: 0.3, y: 60}
 --- !u!114 &1800896815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,17 +1026,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800896811}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c280f79ef1c8c64299e2cdd0164408b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fireParticles: {fileID: 1448848461}
-  emRate: 50
+  emRate: 5
   timeToChangeInSec: 10
-  newRate1: 25
-  newRate2: 10
-  newRate3: 5
+  newRate1: 4
+  newRate2: 3
+  newRate3: 2
 --- !u!1 &1851262159
 GameObject:
   m_ObjectHideFlags: 0
@@ -2144,6 +2151,7 @@ GameObject:
   - component: {fileID: 1260162969913669310}
   - component: {fileID: 1260162969913669309}
   - component: {fileID: 1260162969913669311}
+  - component: {fileID: 1260162969913669312}
   m_Layer: 0
   m_Name: VRAvatar
   m_TagString: Untagged
@@ -2199,6 +2207,19 @@ MonoBehaviour:
   lightSystem: {fileID: 1448848461}
   fire: {fileID: 1584762944}
   introCanvas: {fileID: 1699338172}
+--- !u!114 &1260162969913669312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260162969913669308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e72c81382cdeb8d4b95c183323eacd92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ffSpeed: 19
 --- !u!4 &1260162969949055144
 Transform:
   m_ObjectHideFlags: 0
