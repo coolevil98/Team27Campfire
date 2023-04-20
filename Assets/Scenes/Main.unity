@@ -1016,17 +1016,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800896811}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c280f79ef1c8c64299e2cdd0164408b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fireParticles: {fileID: 1448848461}
   emRate: 5
-  timeToChangeInSec: 10
+  timeToChangeInSec: 13
   newRate1: 4
   newRate2: 3
   newRate3: 2
+  logRate: 15
+  timeToLog: 2
 --- !u!1 &1851262159
 GameObject:
   m_ObjectHideFlags: 0

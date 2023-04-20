@@ -10,6 +10,8 @@ public class NumOfPart : MonoBehaviour
     public float newRate1;
     public float newRate2;
     public float newRate3;
+    public float logRate;
+    public float timeToLog;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,7 @@ public class NumOfPart : MonoBehaviour
     IEnumerator fireParticlesEmission()
     {
         //the 60 is for the intro
-        yield return new WaitForSeconds(60 + timeToChangeInSec);
+        yield return new WaitForSeconds(64 + timeToChangeInSec);
         emRate = newRate1;
         Debug.Log("changed");
         yield return new WaitForSeconds(timeToChangeInSec);
@@ -36,5 +38,11 @@ public class NumOfPart : MonoBehaviour
         yield return new WaitForSeconds(timeToChangeInSec);
         emRate = newRate3;
         Debug.Log("changed3");
+        yield return new WaitForSeconds(10 + timeToLog);
+        emRate = logRate;
+        Debug.Log("logchanged");
+        yield return new WaitForSeconds(timeToChangeInSec);
+        emRate = newRate1;
+        Debug.Log("changed4");
     }
 }
