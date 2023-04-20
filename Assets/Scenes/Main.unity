@@ -461,8 +461,8 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: oceanplaceholder
-    sound: {fileID: 8300000, guid: e1ac4998a3b91e44991ec1a1d131d6d7, type: 3}
-    volume: 0.016
+    sound: {fileID: 8300000, guid: 52acaa14a5ab68c4facb27e4db03c0bb, type: 3}
+    volume: 0.403
     pitch: 1
     source: {fileID: 0}
   - name: voiceplaceholder

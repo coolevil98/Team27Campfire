@@ -5,6 +5,7 @@ using UnityEngine;
 public class SSoundManager : MonoBehaviour
 {
     public SecondarySound[] sounds;
+    public DimFire fire;
     void Awake()
     {
         foreach (SecondarySound s in sounds)
@@ -25,4 +26,5 @@ public class SSoundManager : MonoBehaviour
         }
         s.source.Play();
     }
+
 }

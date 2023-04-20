@@ -21,6 +21,7 @@ public class DimFire : MonoBehaviour
     private float timer;
   
     private bool isFire = false;
+    private bool fireStarted = false;
 
     
     void Start()
@@ -56,7 +57,31 @@ public class DimFire : MonoBehaviour
         }
 
         print(timer);
-        print(alpha);
+        //print(alpha);
+
+        if(timer >= 10.0f && timer <= 10.5f){
+            FindObjectOfType<SSoundManager>().Play("Narration1");
+        }
+
+        if(timer >= 30.0f && timer <= 30.5f){
+            FindObjectOfType<SSoundManager>().Play("Narration2");
+        }
+
+        if(timer >= 120.0f && timer <= 120.5f){
+            FindObjectOfType<SSoundManager>().Play("Narration3");
+        }
+
+        if(timer >= 150.0f && timer <= 150.5f){
+            FindObjectOfType<SSoundManager>().Play("Narration4");
+        }
+
+        if(timer >= 200.0f && timer <= 200.5f){
+            FindObjectOfType<SSoundManager>().Play("Narration5");
+        }
+
+        if(timer >= 250.0f && timer <= 250.5f){
+            FindObjectOfType<SSoundManager>().Play("Narration6");
+        }
 
 
 

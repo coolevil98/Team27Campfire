@@ -9,6 +9,7 @@ public class SkipIntro : MonoBehaviour
     public ParticleSystem lightSystem;
     public GameObject fire;
     public GameObject introCanvas;
+    private int experienceTime = 0;
     // Start is called before the first frame update
     void Start()
     {
