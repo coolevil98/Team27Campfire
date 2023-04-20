@@ -461,15 +461,41 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: oceanplaceholder
-    sound: {fileID: 8300000, guid: 52acaa14a5ab68c4facb27e4db03c0bb, type: 3}
-    volume: 0.403
-    pitch: 1
-    source: {fileID: 0}
-  - name: voiceplaceholder
     sound: {fileID: 8300000, guid: e1ac4998a3b91e44991ec1a1d131d6d7, type: 3}
     volume: 0.016
     pitch: 1
     source: {fileID: 0}
+  - name: Narration1
+    sound: {fileID: 8300000, guid: f718f3239f9ae194ca832fa624ff0fd7, type: 3}
+    volume: 0.41
+    pitch: 1
+    source: {fileID: 0}
+  - name: Narration2
+    sound: {fileID: 8300000, guid: 1a3aece3aa44e714ea7b9e3f10f98781, type: 3}
+    volume: 0.704
+    pitch: 1
+    source: {fileID: 0}
+  - name: Narration3
+    sound: {fileID: 8300000, guid: fd89a142ca899d64c97647210e618d7f, type: 3}
+    volume: 0.703
+    pitch: 1
+    source: {fileID: 0}
+  - name: Narration4
+    sound: {fileID: 8300000, guid: 906b276fc2d23984b9f5189ee6f517a6, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Narration5
+    sound: {fileID: 8300000, guid: 51b472b9be332ee4d88563308a45b860, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Narration6
+    sound: {fileID: 8300000, guid: c1143b2fe22f1424b9a5cd12b99dfcdc, type: 3}
+    volume: 0.704
+    pitch: 1
+    source: {fileID: 0}
+  fire: {fileID: 0}
 --- !u!1 &836775627
 GameObject:
   m_ObjectHideFlags: 0
