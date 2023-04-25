@@ -19,7 +19,15 @@ public class DimFire : MonoBehaviour
     private float alphasDif;
 
     private float timer;
-  
+    
+    public float getTimer
+    {
+        get
+        {
+            return timer;
+        }
+    }
+
     private bool isFire = false;
 
     
@@ -55,8 +63,8 @@ public class DimFire : MonoBehaviour
             Transparency();
         }
 
-        print(timer);
-        print(alpha);
+        //print(timer);
+        //print(alpha);
 
 
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NumOfPart : MonoBehaviour
 {
+    public DimFire timer;
     public ParticleSystem fireParticles;
     public float emRate;
     public float timeToChangeInSec;
@@ -16,19 +17,23 @@ public class NumOfPart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(fireParticlesEmission());
+        
+        //StartCoroutine(fireParticlesEmission());
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(timer.getTimer);
         var emission = fireParticles.emission;
         emission.rateOverTime = emRate;
+        FireParticleWithTimer();
     }
 
     IEnumerator fireParticlesEmission()
     {
         //the 60 is for the intro
+        
         yield return new WaitForSeconds(64 + timeToChangeInSec);
         emRate = newRate1;
         Debug.Log("changed");
@@ -44,5 +49,25 @@ public class NumOfPart : MonoBehaviour
         yield return new WaitForSeconds(timeToChangeInSec);
         emRate = newRate1;
         Debug.Log("changed4");
+    }
+
+    public void FireParticleWithTimer()
+    {
+        
+        if(timer.getTimer >= 10)
+        {
+            emRate = newRate1;
+            Debug.Log("c1");
+        }
+        if(timer.getTimer >= 20)
+        {
+            emRate = newRate2;
+            Debug.Log("c2");
+        }
+        if(timer.getTimer >= 30)
+        {
+            emRate = newRate3;
+            Debug.Log("c3");
+        }
     }
 }
