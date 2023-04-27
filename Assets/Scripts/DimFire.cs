@@ -19,7 +19,15 @@ public class DimFire : MonoBehaviour
     private float alphasDif;
 
     private float timer;
-  
+    
+    public float getTimer
+    {
+        get
+        {
+            return timer;
+        }
+    }
+
     private bool isFire = false;
     private bool fireStarted = false;
 
