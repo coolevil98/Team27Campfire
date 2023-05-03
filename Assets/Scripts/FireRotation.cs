@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlickerEffect : MonoBehaviour
+public class FireRotation : MonoBehaviour
 {
     public DimFire timer;
     public GameObject ball;
@@ -12,31 +12,27 @@ public class FlickerEffect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ball.SetActive(false);
-        
+       
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if(timer.getTimer > 0)
+        if (timer.getTimer > 0)
         {
-            ball.SetActive(true);
             turnOn = true;
         }
-        if(turnOn == true)
+        if (turnOn == true)
         {
             RotateCircle();
         }
-        
+
 
     }
 
     public void RotateCircle()
-    {
-        transform.localEulerAngles = new Vector3(0, 0, Mathf.PingPong(Time.time * speed, degree)-90);
+    {    
+        transform.localEulerAngles = new Vector3(Mathf.PingPong(Time.time * speed, degree) -180,90, 90);
     }
-
-    
 }
