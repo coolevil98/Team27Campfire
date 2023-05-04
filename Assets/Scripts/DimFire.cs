@@ -5,20 +5,22 @@ using UnityEngine;
 public class DimFire : MonoBehaviour
 {
     public Color emberColour = new Color(1.0f, 0.6f, 0.0f, 1.0f);
-    
+    private Color spiteColour;
+
     private ParticleSystem emberParticles;
     public float minVPercentOfMaxV = 0.33333333f;
-    public Vector2[] velocities = new Vector2[2];
+    public Vector2[] velocities = new Vector2[2]; //x for velocity, y for time
     private int velocitiesIndex;
     private float vel;
     private float velTimerDif;
 
-    public Vector2[] alphas = new Vector2[2];
+    public Vector2[] alphas = new Vector2[2];//x for alpha, y for time
     private int alphasIndex;
     private float alpha;
     private float alphasDif;
 
     private float timer;
+    public SpriteRenderer backgroundSprite;
     
     public float getTimer
     {
@@ -44,6 +46,8 @@ public class DimFire : MonoBehaviour
 
         alphasDif = alphas[alphasIndex + 1].y - alphas[alphasIndex].y;
         alphasIndex++;
+
+        spiteColour = backgroundSprite.color;
     }
 
     void Update()
@@ -223,7 +227,10 @@ public class DimFire : MonoBehaviour
         if (timer >= velocities[velocitiesIndex].y)
         {
             velocitiesIndex++;
-            velTimerDif = velocities[velocitiesIndex].y - velocities[velocitiesIndex - 1].y;
+            if (velocitiesIndex < velocities.Length)
+            {
+                velTimerDif = velocities[velocitiesIndex].y - velocities[velocitiesIndex - 1].y;
+            }
         }
 
         var main = emberParticles.main;
@@ -236,12 +243,18 @@ public class DimFire : MonoBehaviour
         if (timer >= alphas[alphasIndex].y)
         {
             alphasIndex++;
-            alphasDif = alphas[alphasIndex].y - alphas[alphasIndex - 1].y;
+            if (alphasIndex < alphas.Length)
+            {
+                alphasDif = alphas[alphasIndex].y - alphas[alphasIndex - 1].y;
+            }
         }
 
         var main = emberParticles.main;
         emberColour.a = alpha;
         main.startColor = emberColour;
+
+        spiteColour.a = alpha;
+        backgroundSprite.color = spiteColour;
     }
 
     public void FireStarted()
