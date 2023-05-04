@@ -1183,7 +1183,7 @@ MonoBehaviour:
   alphas:
   - {x: 1, y: 0}
   - {x: 0.3, y: 300}
-  backgroundSprite: {fileID: 1851262161}
+  backgroundSprite: {fileID: 465664633}
 --- !u!114 &1800896815
 MonoBehaviour:
   m_ObjectHideFlags: 0
