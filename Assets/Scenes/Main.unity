@@ -130,6 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 65477718}
   - component: {fileID: 65477719}
+  - component: {fileID: 65477720}
   m_Layer: 8
   m_Name: FireFlicker
   m_TagString: Untagged
@@ -145,7 +146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65477717}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 4.49}
+  m_LocalPosition: {x: 0, y: 0, z: 2.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1193021677}
@@ -164,11 +165,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2beb7e7f2681c84792f7958d154bef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftMax: 90
-  rightMax: -90
   timer: {fileID: 1800896814}
   ball: {fileID: 1193021676}
-  speed: 1
+  speed: 60
+  degree: 180
+--- !u!114 &65477720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65477717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ebf69a64ee99654cb5eae75d602f762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 1193021676}
+  minSize: 1
+  maxSize: 3
+  cooldown: 5
+  speedChange: 1
 --- !u!1001 &176183978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -582,22 +599,22 @@ PrefabInstance:
     - target: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
@@ -612,12 +629,12 @@ PrefabInstance:
     - target: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 9087048675423250993, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
@@ -1184,6 +1201,22 @@ MonoBehaviour:
   newRate3: 2
   logRate: 15
   timeToLog: 2
+--- !u!114 &1800896816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800896811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed43c9770f10b234990ff47bb5cea1dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 1800896814}
+  ball: {fileID: 1800896811}
+  speed: 10
+  degree: 180
 --- !u!1 &1851262159
 GameObject:
   m_ObjectHideFlags: 0
