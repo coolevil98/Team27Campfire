@@ -16,11 +16,15 @@ public class BlackoutEffect : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            wall.SetActive(true);
-            StartCoroutine(makeInvisible());
+            ActiviteWall();
         }
     }
 
+    public void ActiviteWall()
+    {
+        wall.SetActive(true);
+        StartCoroutine(makeInvisible());
+    }
     IEnumerator makeInvisible()
     {
         yield return new WaitForSeconds(2);

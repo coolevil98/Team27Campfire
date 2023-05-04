@@ -5,25 +5,49 @@ using UnityEngine;
 
 public class BlackoutMoving : MonoBehaviour
 {
+    #region Variables
+    [Header("Object")]
     public GameObject movingWall;
-    //this will move the panning object across the screen
-    //such as from right to left
-    //could use transform translate
-    //on start put it back to the beginning position
+    [Header ("Start and End positions")]
+    public Vector3 startMarker;
+    public Vector3 endMarker;
 
+    private float journeyLength;
+    private float startTime;
+
+    private bool moving = false;
+    [Header("Speed")]
+    public float speed = 1.0F;
+    #endregion
     // Start is called before the first frame update
     void Start()
     {
-        
+        journeyLength = Vector3.Distance(startMarker, endMarker);
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.O))
         {
-            movingWall.transform.position= Vector3.Lerp(new Vector3(10,0,3), new Vector3(-10, 0, 3), 0.2f);
-            Debug.Log("hi");
+            StartMove();
         }
+        if(moving)
+        {
+            float distCovered = (Time.time - startTime) * speed;
+            float fractionOfJourney = distCovered / journeyLength;
+            movingWall.transform.position = Vector3.Lerp(startMarker, endMarker, fractionOfJourney);
+            if(fractionOfJourney>=1)
+            {
+                moving = false;
+            }
+        }
+    }
+
+    public void StartMove()
+    {
+        moving = true;
+        startTime = Time.time;
     }
 }
