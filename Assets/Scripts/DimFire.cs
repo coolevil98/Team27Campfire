@@ -73,20 +73,20 @@ public class DimFire : MonoBehaviour
 
         //system for determining what sound effect plays where. Once all the sound effects are at the right volume/right order, I might get rid of this and put all the sound effects
         //into one continuous audio file so we don't have to have 1 billion if statements
+        if(timer >= 5.0f && timer <= 5.5f){
+            FindObjectOfType<SSoundManager>().Play("Narration1");
+        }
+
         if(timer >= 10.0f && timer <= 10.5f){
+            FindObjectOfType<SSoundManager>().Play("bottledrink");
+        }
+
+        if(timer >= 12.0f && timer <= 12.5f){
             FindObjectOfType<SSoundManager>().Play("chairshuffle1");
         }
 
         if(timer >= 20.0f && timer <= 20.5f){
-            FindObjectOfType<SSoundManager>().Play("bottledrink");
-        }
-
-        if(timer >= 30.0f && timer <= 30.5f){
-            FindObjectOfType<SSoundManager>().Play("Narration1");
-        }
-
-        if(timer >= 50.0f && timer <= 50.5f){
-            FindObjectOfType<SSoundManager>().Play("chairshuffle2");
+            FindObjectOfType<SSoundManager>().Play("Narration2");
         }
 
         if(timer >= 55.0f && timer <= 55.5f){
@@ -94,7 +94,7 @@ public class DimFire : MonoBehaviour
         }
 
         if(timer >= 75.0f && timer <= 75.5f){
-            FindObjectOfType<SSoundManager>().Play("Narration2");
+            FindObjectOfType<SSoundManager>().Play("chairshuffle2");
         }
 
         if(timer >= 90.0f && timer <= 90.5f){
