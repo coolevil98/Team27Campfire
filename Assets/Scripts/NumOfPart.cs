@@ -53,21 +53,87 @@ public class NumOfPart : MonoBehaviour
 
     public void FireParticleWithTimer()
     {
-        
-        if(timer.getTimer >= 10)
+        //End of 300s and end of experience
+        if (timer.getTimer >= 375)
         {
-            emRate = newRate1;
-            Debug.Log("c1");
+            emRate = newRate3;
+            Debug.Log("c3");
         }
-        if(timer.getTimer >= 20)
+        else if (timer.getTimer >= 350)
         {
             emRate = newRate2;
             Debug.Log("c2");
         }
-        if(timer.getTimer >= 30)
+        else if(timer.getTimer >= 310)
+        {
+            emRate = newRate1;
+            Debug.Log("c1");
+        }
+        else if(timer.getTimer >= 300)
+        {
+            emRate = logRate;
+        }
+        //End of 200s
+        else if(timer.getTimer >= 275)
         {
             emRate = newRate3;
             Debug.Log("c3");
+        }
+        else if(timer.getTimer >= 250)
+        {
+            emRate = newRate2;
+            Debug.Log("c2");
+        }
+        else if(timer.getTimer >= 210)
+        {
+            emRate = newRate1;
+            Debug.Log("c1");
+        }
+        else if(timer.getTimer >= 200)
+        {
+            emRate = logRate;
+        }
+        //End of 100s
+        else if(timer.getTimer >= 175)
+        {
+            emRate = newRate3;
+            Debug.Log("c3");
+        }
+        else if(timer.getTimer >= 150)
+        {
+            emRate = newRate2;
+            Debug.Log("c2");
+        }
+        else if(timer.getTimer >= 110)
+        {
+            emRate = newRate1;
+            Debug.Log("c1");
+        }
+        else if(timer.getTimer >= 100)
+        {
+            emRate = logRate;
+            Debug.Log("flare");
+        }
+        //First 100s of the fire
+        else if(timer.getTimer >= 75)
+        {
+            emRate = newRate3;
+            Debug.Log("c3");
+        }
+        else if(timer.getTimer >= 50)
+        {
+            emRate = newRate2;
+            Debug.Log("c2");
+        }
+        else if(timer.getTimer >= 10)
+        {
+            emRate = newRate1;
+            Debug.Log("c1");
+        }
+        else if(timer.getTimer >= 1)
+        {
+            emRate = logRate;
+            Debug.Log("flare");
         }
     }
 }
