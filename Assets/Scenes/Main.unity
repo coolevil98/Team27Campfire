@@ -578,10 +578,222 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: fireplaceholder
-    sound: {fileID: 8300000, guid: 209d9bf9a9c663c4da19261f73b230de, type: 3}
+    sound: {fileID: 8300000, guid: f1a4f0867f64c0546a49277d83bfe5fc, type: 3}
+    volume: 0.502
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: oceanplaceholder
+    sound: {fileID: 8300000, guid: e1ac4998a3b91e44991ec1a1d131d6d7, type: 3}
+    volume: 0.146
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Narration1
+    sound: {fileID: 8300000, guid: f718f3239f9ae194ca832fa624ff0fd7, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Narration2
+    sound: {fileID: 8300000, guid: 1a3aece3aa44e714ea7b9e3f10f98781, type: 3}
     volume: 0.2
     pitch: 1
+    loop: 0
     source: {fileID: 0}
+  - name: Narration3
+    sound: {fileID: 8300000, guid: fd89a142ca899d64c97647210e618d7f, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Narration4
+    sound: {fileID: 8300000, guid: 906b276fc2d23984b9f5189ee6f517a6, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Narration5
+    sound: {fileID: 8300000, guid: 51b472b9be332ee4d88563308a45b860, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Narration6
+    sound: {fileID: 8300000, guid: c1143b2fe22f1424b9a5cd12b99dfcdc, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: murmur1
+    sound: {fileID: 8300000, guid: bb0189bd1faca1f46b9955481f76deef, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: murmur2
+    sound: {fileID: 8300000, guid: 315b2d3556f4b6b448b6c9424cfd6437, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: murmur3
+    sound: {fileID: 8300000, guid: 66a51ae45aa9a2748a33d62ec5eeed36, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: murmur4
+    sound: {fileID: 8300000, guid: bcc6601edf94f1242bec89e51e9c2aa0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: murmur5
+    sound: {fileID: 8300000, guid: 1b26305d68ebe2b4b82c6a8481eba055, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: chairshuffle1
+    sound: {fileID: 8300000, guid: 1e0f350bbe5c00f4db7218c8a16e6a7a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: chairshuffle2
+    sound: {fileID: 8300000, guid: 455c260a2048eca42a2b12cf4baf4fcb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: chairshuffle3
+    sound: {fileID: 8300000, guid: 36a0666580d882146aa10f377bc7eb00, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: chairshuffle4
+    sound: {fileID: 8300000, guid: 67293f5796ba29c4a9b807bad02d0834, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: chairshuffle5
+    sound: {fileID: 8300000, guid: 4fb5149a2b8de264f972406f2618e2ff, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: tentzip
+    sound: {fileID: 8300000, guid: cc19b8a2775c7b745bab42208809f19e, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: tentzip2
+    sound: {fileID: 8300000, guid: 99340b23486b2524288e1e280db5e987, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: tentzip3
+    sound: {fileID: 8300000, guid: 8128eda3b551538468ab2fe70d94fe4c, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sleepingbagroll
+    sound: {fileID: 8300000, guid: 0fbe994ec3dd2df4180d778320c288df, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sleepingbagroll2
+    sound: {fileID: 8300000, guid: f4da3a97234b67245a4f4381a316d56f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sleepingbagroll3
+    sound: {fileID: 8300000, guid: 789910d6d907ceb43962dd613bbbbe2a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sleepingbagroll4
+    sound: {fileID: 8300000, guid: 3ea86da4a70746844973e298c4e7d6a5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sleepingbagroll5
+    sound: {fileID: 8300000, guid: 75cdaf55e55861f4ea7481f1bbb33476, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: baglook
+    sound: {fileID: 8300000, guid: 37bb53f93fc58164d8bf4ac7e2ec0a53, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bottledrink
+    sound: {fileID: 8300000, guid: 784894f31639ffe41b4d17c5ea70700a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bottledrink2
+    sound: {fileID: 8300000, guid: 96b229934de0bce43b6be6bb7c4e856e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bottledrink3
+    sound: {fileID: 8300000, guid: 18dd7f0ad9989da42833aa71514cd2b9, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: cupfiddle
+    sound: {fileID: 8300000, guid: d8168f2e9fb3c3744afbdbe90c19c27b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: cupfiddle2
+    sound: {fileID: 8300000, guid: b56e4dfe34417d64f84382deac84b8cb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: cupfiddle3
+    sound: {fileID: 8300000, guid: 16e0400389859da4f9dca8414c2d1df8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sigh1
+    sound: {fileID: 8300000, guid: 3842eb795ac6da7458e5f3fa1b29c5a9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sigh2
+    sound: {fileID: 8300000, guid: bac36fd05e5fddd45b2db0f400215417, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: sigh3
+    sound: {fileID: 8300000, guid: c3aa9738a6289c24fa4ce098dba7922c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  fire: {fileID: 0}
 --- !u!1 &836775627
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,7 +1185,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 925720df9be14f5439e4f5f0ccb6d484, type: 2}
+  - {fileID: 2100000, guid: 3b9792a6549e45144b79599fd88333f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

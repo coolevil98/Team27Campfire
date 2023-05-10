@@ -9,6 +9,7 @@ public class SkipIntro : MonoBehaviour
     public ParticleSystem lightSystem;
     public GameObject fire;
     public GameObject introCanvas;
+    private int experienceTime = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class SkipIntro : MonoBehaviour
             lightSystem.GetComponent<DimFire>().FireStarted();
             lightSystem.Play();
             FindObjectOfType<SSoundManager>().Play("fireplaceholder");
+            FindObjectOfType<SSoundManager>().Play("oceanplaceholder");
         }
     }
 }

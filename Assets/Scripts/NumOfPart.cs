@@ -14,6 +14,8 @@ public class NumOfPart : MonoBehaviour
     public float logRate;
     public float timeToLog;
 
+    private float fireTime = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
