@@ -7,42 +7,44 @@ public class BallSize : MonoBehaviour
     public GameObject ball;
     public float minSize;
     public float maxSize;
-    public float cooldown;
+    public float cooldown = 5;
+    public float changeTimer = 1;
     private float timer;
-    private Vector3 localSize;
-    private Vector3 newLocalSize;
-    public float speedChange;
+    private Vector3 newlocalSize;
+    private Vector3 velocity = Vector3.zero;
+
     void Start()
     {
-        localSize = ball.transform.localScale;
+        newlocalSize = ball.transform.localScale;
     }
+
     // Update is called once per frame
     void Update()
     {
         if(ball.activeSelf == true)
         {
             if (timer <= 0)
-            {  
-                ChangeSize();
+            {
+                NewSize();
             }
             else
             {
-                //Debug.Log(timer);
                 timer = timer - 1 * Time.deltaTime;
             }
         }
+        ChangeSize();
         
-        
+    }
+
+    public void NewSize()
+    {
+        newlocalSize.x = Random.Range(minSize, maxSize);
+        newlocalSize.y = Random.Range(minSize, maxSize);
+        timer = cooldown;
     }
 
     public void ChangeSize()
     {
-        Debug.Log("haa");
-        localSize.x = Random.Range(minSize, maxSize);
-        localSize.y = Random.Range(minSize, maxSize);
-        newLocalSize = new Vector3(newLocalSize.x, newLocalSize.y, 1f);
-        //localSize = Vector3.Lerp(localSize, newLocalSize, speedChange * Time.deltaTime);
-        ball.transform.localScale = localSize;
-        timer = cooldown;
+        ball.transform.localScale = Vector3.SmoothDamp(ball.transform.localScale, newlocalSize, ref velocity, changeTimer);
     }
 }
