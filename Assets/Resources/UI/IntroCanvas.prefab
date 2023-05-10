@@ -332,11 +332,11 @@ MonoBehaviour:
   textHolder: {fileID: 8136966414540763034}
   introTextCollection:
   - You are at a campsite on a secluded beach with your friends
-  - You are all sitting in a circle around the fire relaxing on reclined chairs
-  - Your tents surround your circle lit up by the warm fire
+  - Sitting in a circle around the fire relaxing on reclined chairs
+  - Your tents surround you, lit up by the warm fire
   - 'When you feel it''s time to get off your comfy camping recliner '
   - and make your way to bed, please turn off and remove your headset
-  - Keep your eyes closed to avoid any unnecessary light exposure before sleep
+  - And keep your eyes closed to avoid any unnecessary light exposure
   - Now please close your eyes
   introTextLength:
   - 8
