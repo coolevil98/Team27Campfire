@@ -578,13 +578,13 @@ MonoBehaviour:
   sounds:
   - name: fireplaceholder
     sound: {fileID: 8300000, guid: f1a4f0867f64c0546a49277d83bfe5fc, type: 3}
-    volume: 0.25
+    volume: 0.502
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: oceanplaceholder
     sound: {fileID: 8300000, guid: e1ac4998a3b91e44991ec1a1d131d6d7, type: 3}
-    volume: 0.016
+    volume: 0.146
     pitch: 1
     loop: 1
     source: {fileID: 0}
