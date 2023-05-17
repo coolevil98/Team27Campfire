@@ -171,8 +171,9 @@ MonoBehaviour:
   speed: 1
   degree: 180
   speedMults:
-  - {x: 1, y: 0}
-  - {x: 0.5, y: 300}
+  - {x: 1, y: 2.5, z: 0}
+  - {x: 0.5, y: 1.5, z: 300}
+  randTimer: 3
 --- !u!114 &65477720
 MonoBehaviour:
   m_ObjectHideFlags: 0
