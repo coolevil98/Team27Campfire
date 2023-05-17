@@ -68,7 +68,7 @@ public class DimFire : MonoBehaviour
             Transparency();
         }
 
-        print(timer);
+        //print(timer);
         //print(alpha);
 
         //system for determining what sound effect plays where. Once all the sound effects are at the right volume/right order, I might get rid of this and put all the sound effects
