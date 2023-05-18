@@ -85,8 +85,12 @@ public class DimFire : MonoBehaviour
             FindObjectOfType<SSoundManager>().Play("chairshuffle1");
         }
 
-        if(timer >= 20.0f && timer <= 20.5f){
+        if(timer >= 17.0f && timer <= 17.5f){
             FindObjectOfType<SSoundManager>().Play("Narration2");
+        }
+
+        if(timer >= 30.0f && timer <= 30.5f){
+            FindObjectOfType<SSoundManager>().Play("crickets");
         }
 
         if(timer >= 55.0f && timer <= 55.5f){
@@ -134,6 +138,7 @@ public class DimFire : MonoBehaviour
         }
 
         if(timer >= 380.0f && timer <= 380.5f){
+            FindObjectOfType<SSoundManager>().Play("crickets");
             FindObjectOfType<SSoundManager>().Play("sleepingbagroll");
         }
 
@@ -195,6 +200,7 @@ public class DimFire : MonoBehaviour
 
         if(timer >= 600.0f && timer <= 600.5f){
             FindObjectOfType<SSoundManager>().Play("tentzip3");
+            FindObjectOfType<SSoundManager>().Play("crickets");
         }
 
 

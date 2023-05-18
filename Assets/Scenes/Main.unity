@@ -533,49 +533,49 @@ MonoBehaviour:
   sounds:
   - name: fireplaceholder
     sound: {fileID: 8300000, guid: f1a4f0867f64c0546a49277d83bfe5fc, type: 3}
-    volume: 0.502
+    volume: 0.6
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: oceanplaceholder
     sound: {fileID: 8300000, guid: e1ac4998a3b91e44991ec1a1d131d6d7, type: 3}
-    volume: 0.146
+    volume: 0.043
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Narration1
     sound: {fileID: 8300000, guid: f718f3239f9ae194ca832fa624ff0fd7, type: 3}
-    volume: 0.15
+    volume: 0.32
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Narration2
     sound: {fileID: 8300000, guid: 1a3aece3aa44e714ea7b9e3f10f98781, type: 3}
-    volume: 0.2
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Narration3
     sound: {fileID: 8300000, guid: fd89a142ca899d64c97647210e618d7f, type: 3}
-    volume: 0.2
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Narration4
     sound: {fileID: 8300000, guid: 906b276fc2d23984b9f5189ee6f517a6, type: 3}
-    volume: 0.5
+    volume: 0.8
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Narration5
     sound: {fileID: 8300000, guid: 51b472b9be332ee4d88563308a45b860, type: 3}
-    volume: 0.5
+    volume: 0.8
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Narration6
     sound: {fileID: 8300000, guid: c1143b2fe22f1424b9a5cd12b99dfcdc, type: 3}
-    volume: 0.3
+    volume: 0.988
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -689,7 +689,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: baglook
     sound: {fileID: 8300000, guid: 37bb53f93fc58164d8bf4ac7e2ec0a53, type: 3}
-    volume: 1
+    volume: 0.9
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -701,7 +701,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: bottledrink2
     sound: {fileID: 8300000, guid: 96b229934de0bce43b6be6bb7c4e856e, type: 3}
-    volume: 1
+    volume: 0.9
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -744,6 +744,24 @@ MonoBehaviour:
   - name: sigh3
     sound: {fileID: 8300000, guid: c3aa9738a6289c24fa4ce098dba7922c, type: 3}
     volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: windplaceholder
+    sound: {fileID: 8300000, guid: 68a56950582010c4b8fd7fa3cebb2a69, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: cicadas
+    sound: {fileID: 8300000, guid: 7d613a98de85aa54a96a11aeeb2e1838, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: crickets
+    sound: {fileID: 8300000, guid: 75a8a71be671e9542816a0399ee718ee, type: 3}
+    volume: 0.05
     pitch: 1
     loop: 0
     source: {fileID: 0}
