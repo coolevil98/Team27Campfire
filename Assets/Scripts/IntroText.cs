@@ -36,6 +36,10 @@ public class IntroText : MonoBehaviour
     {
         introText.text = introTextCollection[currentText];
         textDisplayTime = introTextLength[currentText];
+        FindObjectOfType<SSoundManager>().Play("fireplaceholder");
+        FindObjectOfType<SSoundManager>().Play("oceanplaceholder");
+        FindObjectOfType<SSoundManager>().Play("windplaceholder");
+        FindObjectOfType<SSoundManager>().Play("introchatter");
     }
 
     // Update is called once per frame
@@ -55,10 +59,10 @@ public class IntroText : MonoBehaviour
                 fire.SetActive(true);
                 lightSystem.GetComponent<DimFire>().FireStarted();
                 lightSystem.Play();
-                FindObjectOfType<SSoundManager>().Play("fireplaceholder");
-                FindObjectOfType<SSoundManager>().Play("oceanplaceholder");
-                FindObjectOfType<SSoundManager>().Play("windplaceholder");
                 Destroy(textHolder);
+                FindObjectOfType<SSoundManager>().VolumeMultiplier("fireplaceholder", 2f);
+                FindObjectOfType<SSoundManager>().VolumeMultiplier("oceanplaceholder", 2f);
+                FindObjectOfType<SSoundManager>().VolumeMultiplier("windplaceholder", 2f);
             }
             if (currentText < introTextCollection.Count)
             {

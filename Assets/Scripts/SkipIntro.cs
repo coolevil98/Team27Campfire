@@ -25,9 +25,15 @@ public class SkipIntro : MonoBehaviour
             fire.SetActive(true);
             lightSystem.GetComponent<DimFire>().FireStarted();
             lightSystem.Play();
-            FindObjectOfType<SSoundManager>().Play("fireplaceholder");
-            FindObjectOfType<SSoundManager>().Play("oceanplaceholder");
-            FindObjectOfType<SSoundManager>().Play("windplaceholder");
+            //FindObjectOfType<SSoundManager>().Play("fireplaceholder");
+            // FindObjectOfType<SSoundManager>().Play("oceanplaceholder");
+            // FindObjectOfType<SSoundManager>().Play("windplaceholder");
+
+            FindObjectOfType<SSoundManager>().VolumeMultiplier("fireplaceholder", 2f);
+            FindObjectOfType<SSoundManager>().VolumeMultiplier("oceanplaceholder", 2f);
+            FindObjectOfType<SSoundManager>().VolumeMultiplier("windplaceholder", 2f);
+
+
             FindObjectOfType<SSoundManager>().Play("cicadas");
         }
     }

@@ -558,19 +558,19 @@ MonoBehaviour:
   sounds:
   - name: fireplaceholder
     sound: {fileID: 8300000, guid: f1a4f0867f64c0546a49277d83bfe5fc, type: 3}
-    volume: 0.6
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: oceanplaceholder
     sound: {fileID: 8300000, guid: e1ac4998a3b91e44991ec1a1d131d6d7, type: 3}
-    volume: 0.043
+    volume: 0.021
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Narration1
     sound: {fileID: 8300000, guid: f718f3239f9ae194ca832fa624ff0fd7, type: 3}
-    volume: 0.32
+    volume: 0.25
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -773,8 +773,8 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: windplaceholder
-    sound: {fileID: 8300000, guid: 68a56950582010c4b8fd7fa3cebb2a69, type: 3}
-    volume: 0.2
+    sound: {fileID: 8300000, guid: 3625e3904383bfc4ca6c075caeafbc74, type: 3}
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -790,7 +790,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  fire: {fileID: 0}
+  - name: introchatter
+    sound: {fileID: 8300000, guid: 4f5098ad4a578a641b5be2d5777eedd1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &836775627
 GameObject:
   m_ObjectHideFlags: 0
