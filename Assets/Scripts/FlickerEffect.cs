@@ -62,7 +62,7 @@ public class FlickerEffect : MonoBehaviour
     void FixedUpdate()
     {
         pingPongTimer += speed * speedMult;
-        print(ballColor);
+        //print(ballColor);
         BallFlash();
     }
 
@@ -96,7 +96,7 @@ public class FlickerEffect : MonoBehaviour
     {
         aTimer += aIncrement;
         ballColor.a = ballFade.Evaluate(aTimer);
-        print(aTimer);
+        //print(aTimer);
         ballRenderer.material.color = ballColor;
     }
 }

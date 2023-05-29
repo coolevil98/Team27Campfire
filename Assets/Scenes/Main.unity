@@ -557,14 +557,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: fireplaceholder
-    sound: {fileID: 8300000, guid: f1a4f0867f64c0546a49277d83bfe5fc, type: 3}
+    sound: {fileID: 8300000, guid: 52b774b8946b37d40906234157a74344, type: 3}
     volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: oceanplaceholder
-    sound: {fileID: 8300000, guid: e1ac4998a3b91e44991ec1a1d131d6d7, type: 3}
-    volume: 0.021
+    sound: {fileID: 8300000, guid: 0f0b79ff847110e4cbcae5adb3595299, type: 3}
+    volume: 0.15
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -773,7 +773,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: windplaceholder
-    sound: {fileID: 8300000, guid: 3625e3904383bfc4ca6c075caeafbc74, type: 3}
+    sound: {fileID: 8300000, guid: 94f66cf4f19423146a4ca0a44902406c, type: 3}
     volume: 0.1
     pitch: 1
     loop: 1
@@ -793,6 +793,24 @@ MonoBehaviour:
   - name: introchatter
     sound: {fileID: 8300000, guid: 4f5098ad4a578a641b5be2d5777eedd1, type: 3}
     volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: fireintro
+    sound: {fileID: 8300000, guid: 228f87be890dff342b04bc4012c01633, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: oceanintro
+    sound: {fileID: 8300000, guid: aab405da7d665cf4da5d29d972abf073, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: windintro
+    sound: {fileID: 8300000, guid: f717ae558ea325b4d9572bb5346b857a, type: 3}
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -1832,7 +1850,7 @@ Transform:
   m_GameObject: {fileID: 2112550167}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1.0000001, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1676988090}
   m_RootOrder: 2

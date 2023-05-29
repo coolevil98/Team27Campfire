@@ -29,9 +29,9 @@ public class SkipIntro : MonoBehaviour
             // FindObjectOfType<SSoundManager>().Play("oceanplaceholder");
             // FindObjectOfType<SSoundManager>().Play("windplaceholder");
 
-            FindObjectOfType<SSoundManager>().VolumeMultiplier("fireplaceholder", 2f);
-            FindObjectOfType<SSoundManager>().VolumeMultiplier("oceanplaceholder", 2f);
-            FindObjectOfType<SSoundManager>().VolumeMultiplier("windplaceholder", 2f);
+            // FindObjectOfType<SSoundManager>().VolumeMultiplier("fireplaceholder", 2f);
+            // FindObjectOfType<SSoundManager>().VolumeMultiplier("oceanplaceholder", 2f);
+            // FindObjectOfType<SSoundManager>().VolumeMultiplier("windplaceholder", 2f);
 
 
             FindObjectOfType<SSoundManager>().Play("cicadas");
