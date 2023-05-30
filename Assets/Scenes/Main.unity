@@ -814,6 +814,25 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: introchatter2
+    sound: {fileID: 8300000, guid: c2797f205338c6744858e005944ca1b1, type: 3}
+    volume: 0.82
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: laugh1
+    sound: {fileID: 8300000, guid: a75277b0ee78cca4ab061cf897db7417, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: laugh2
+    sound: {fileID: 8300000, guid: 4d0f48820012d33468c7c3e47e116df7, type: 3}
+    volume: 0.515
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  fireTimer: {fileID: 1800896814}
 --- !u!1 &836775627
 GameObject:
   m_ObjectHideFlags: 0

@@ -50,6 +50,15 @@ public class IntroText : MonoBehaviour
         if (textDisplayTime <=  0)
         {
             currentText++;
+            if(currentText == 1 && textDisplayTime <= 6f)
+            {
+                FindObjectOfType<SSoundManager>().Play("laugh1");
+            }
+
+            if(currentText == 4 && textDisplayTime <= 6f)
+            {
+                FindObjectOfType<SSoundManager>().Play("laugh2");
+            }
             if (currentText >= introTextCollection.Count)
             {
                 fire.SetActive(true);
