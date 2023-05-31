@@ -30,7 +30,7 @@ public class SSoundManager : MonoBehaviour
     }
 
     void Update(){
-        Debug.Log(HasStopped("fireintro"));
+        Debug.Log(fireTimer.getTimer);
         if(stopIntro)
         {
             if(HasStopped("fireintro"))
@@ -39,8 +39,10 @@ public class SSoundManager : MonoBehaviour
                 Play("fireplaceholder");
                 Play("oceanplaceholder");
                 Play("windplaceholder");
+                Play("cicadas");
             }
         }
+
         //system for determining what sound effect plays where. Once all the sound effects are at the right volume/right order, I might get rid of this and put all the sound effects
         //into one continuous audio file so we don't have to have 1 billion if statements
         if(fireTimer.getTimer >= 5.0f && fireTimer.getTimer <= 5.5f){
