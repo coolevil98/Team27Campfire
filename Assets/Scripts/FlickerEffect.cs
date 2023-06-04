@@ -8,12 +8,23 @@ public class FlickerEffect : MonoBehaviour
     private float timer;
     private float pingPongTimer;
     public GameObject ball;
+    private Color ballColor;
+    private Renderer ballRenderer;
     public float speedMult = 1;
     public float speed = 1;
     private bool turnOn = false;
     public float degree;
 
-    public Vector2[] speedMults = new Vector2[2];//x for speed, y for time
+    public AnimationCurve ballFade;
+    public float ballCycle = 1; //seconds for ball to complete full transperency cycle
+    private float aTimer;
+    private float aIncrement;
+
+    public Vector3[] speedMults = new Vector3[2];//x for min speed, y for max speed, z for time
+    public int randTimer = 3; //number of seconds to calculate a random speed
+    private int randTimes = 1;
+    private float minSpeedMult;
+    private float maxSpeedMult;
     private int speedsIndex;
     private float timeDif;
 
@@ -21,9 +32,11 @@ public class FlickerEffect : MonoBehaviour
     void Start()
     {
         ball.SetActive(false);
-
-        timeDif = speedMults[speedsIndex + 1].y - speedMults[speedsIndex].y;
+        ballRenderer = ball.GetComponent<Renderer>();
+        ballColor = ballRenderer.material.color;
+        timeDif = speedMults[speedsIndex + 1].z - speedMults[speedsIndex].z;
         speedsIndex++;
+        aIncrement = 1 / (25 * ballCycle);
     }
 
     // Update is called once per frame
@@ -42,13 +55,15 @@ public class FlickerEffect : MonoBehaviour
                 Speed();
             }
             RotateCircle();
+            SetSpeedMult();
         }
-        print(speed);
     }
 
     void FixedUpdate()
     {
         pingPongTimer += speed * speedMult;
+        //print(ballColor);
+        BallFlash();
     }
 
     public void RotateCircle()
@@ -58,11 +73,30 @@ public class FlickerEffect : MonoBehaviour
 
     public void Speed()
     {
-        speedMult = speedMults[speedsIndex - 1].x + (speedMults[speedsIndex].x - speedMults[speedsIndex - 1].x) * (timer - speedMults[speedsIndex - 1].y) / timeDif;
-        if (timer >= speedMults[speedsIndex].y)
+        minSpeedMult = speedMults[speedsIndex - 1].x + (speedMults[speedsIndex].x - speedMults[speedsIndex - 1].x) * (timer - speedMults[speedsIndex - 1].z) / timeDif;
+        maxSpeedMult = speedMults[speedsIndex - 1].y + (speedMults[speedsIndex].y - speedMults[speedsIndex - 1].y) * (timer - speedMults[speedsIndex - 1].z) / timeDif;
+        if (timer >= speedMults[speedsIndex].z)
         {
-            timeDif = speedMults[speedsIndex].y - speedMults[speedsIndex - 1].y;
+            timeDif = speedMults[speedsIndex].z - speedMults[speedsIndex - 1].z;
             speedsIndex++;
         }
+    }
+
+    public void SetSpeedMult()
+    {
+        if (timer / randTimer > randTimes)
+        {
+            randTimes++;
+            speedMult = Random.Range(minSpeedMult, maxSpeedMult + 2); //+2 to make it more likely to be at higher speed
+            speedMult = Mathf.Clamp(speedMult, minSpeedMult, maxSpeedMult);
+        }
+    }
+
+    public void BallFlash()
+    {
+        aTimer += aIncrement;
+        ballColor.a = ballFade.Evaluate(aTimer);
+        //print(aTimer);
+        ballRenderer.material.color = ballColor;
     }
 }

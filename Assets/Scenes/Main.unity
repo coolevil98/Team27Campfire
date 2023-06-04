@@ -170,9 +170,35 @@ MonoBehaviour:
   speedMult: 1
   speed: 1
   degree: 180
+  ballFade:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.99853516
+      value: 1
+      inSlope: -0.26292357
+      outSlope: -0.26292357
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.07393981
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 0
+    m_RotationOrder: 4
+  ballCycle: 1
   speedMults:
-  - {x: 1, y: 0}
-  - {x: 0.5, y: 300}
+  - {x: 1, y: 3, z: 0}
+  - {x: 1, y: 2.5, z: 300}
+  randTimer: 3
 --- !u!114 &65477720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,7 +291,7 @@ PrefabInstance:
     - target: {fileID: 8476378579762181594, guid: 1b527c080b2106c47ae356c43e7fec63,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.58
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 8476378579762181594, guid: 1b527c080b2106c47ae356c43e7fec63,
         type: 3}
@@ -324,53 +350,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b527c080b2106c47ae356c43e7fec63, type: 3}
---- !u!1 &443190962
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 443190964}
-  - component: {fileID: 443190963}
-  m_Layer: 0
-  m_Name: RandomFire
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &443190963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443190962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a733977e89b6e4cb4c60a8b33298f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FirePrefab:
-  - {fileID: 1354722487795299938, guid: bc7e7dd134e99cd4e8049c4f1424e584, type: 3}
-  - {fileID: 8721851812652426815, guid: 048d9dc61b6173043b53569bcb49bbc7, type: 3}
-  - {fileID: 7180515037729752939, guid: 6ce59ed1dee37974f901c57b116f9dd5, type: 3}
---- !u!4 &443190964
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443190962}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.8, y: 3.75, z: 8.88}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1676988090}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &465664631
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,50 +557,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: fireplaceholder
-    sound: {fileID: 8300000, guid: f1a4f0867f64c0546a49277d83bfe5fc, type: 3}
-    volume: 0.502
+    sound: {fileID: 8300000, guid: 52b774b8946b37d40906234157a74344, type: 3}
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: oceanplaceholder
-    sound: {fileID: 8300000, guid: e1ac4998a3b91e44991ec1a1d131d6d7, type: 3}
-    volume: 0.146
+    sound: {fileID: 8300000, guid: 0f0b79ff847110e4cbcae5adb3595299, type: 3}
+    volume: 0.15
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Narration1
     sound: {fileID: 8300000, guid: f718f3239f9ae194ca832fa624ff0fd7, type: 3}
-    volume: 0.15
+    volume: 0.25
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Narration2
     sound: {fileID: 8300000, guid: 1a3aece3aa44e714ea7b9e3f10f98781, type: 3}
-    volume: 0.2
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Narration3
     sound: {fileID: 8300000, guid: fd89a142ca899d64c97647210e618d7f, type: 3}
-    volume: 0.2
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Narration4
     sound: {fileID: 8300000, guid: 906b276fc2d23984b9f5189ee6f517a6, type: 3}
-    volume: 0.5
+    volume: 0.8
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Narration5
     sound: {fileID: 8300000, guid: 51b472b9be332ee4d88563308a45b860, type: 3}
-    volume: 0.5
+    volume: 0.8
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Narration6
     sound: {fileID: 8300000, guid: c1143b2fe22f1424b9a5cd12b99dfcdc, type: 3}
-    volume: 0.3
+    volume: 0.988
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -735,7 +714,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: baglook
     sound: {fileID: 8300000, guid: 37bb53f93fc58164d8bf4ac7e2ec0a53, type: 3}
-    volume: 1
+    volume: 0.9
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -747,7 +726,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: bottledrink2
     sound: {fileID: 8300000, guid: 96b229934de0bce43b6be6bb7c4e856e, type: 3}
-    volume: 1
+    volume: 0.9
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -793,7 +772,67 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  fire: {fileID: 0}
+  - name: windplaceholder
+    sound: {fileID: 8300000, guid: 94f66cf4f19423146a4ca0a44902406c, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: cicadas
+    sound: {fileID: 8300000, guid: 7d613a98de85aa54a96a11aeeb2e1838, type: 3}
+    volume: 0.9
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: crickets
+    sound: {fileID: 8300000, guid: 75a8a71be671e9542816a0399ee718ee, type: 3}
+    volume: 0.05
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: introchatter
+    sound: {fileID: 8300000, guid: 4f5098ad4a578a641b5be2d5777eedd1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: fireintro
+    sound: {fileID: 8300000, guid: 228f87be890dff342b04bc4012c01633, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: oceanintro
+    sound: {fileID: 8300000, guid: aab405da7d665cf4da5d29d972abf073, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: windintro
+    sound: {fileID: 8300000, guid: f717ae558ea325b4d9572bb5346b857a, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: introchatter2
+    sound: {fileID: 8300000, guid: c2797f205338c6744858e005944ca1b1, type: 3}
+    volume: 0.82
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: laugh1
+    sound: {fileID: 8300000, guid: a75277b0ee78cca4ab061cf897db7417, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: laugh2
+    sound: {fileID: 8300000, guid: 4d0f48820012d33468c7c3e47e116df7, type: 3}
+    volume: 0.515
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  fireTimer: {fileID: 1800896814}
 --- !u!1 &836775627
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,6 +888,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: EmberParticles
       objectReference: {fileID: 0}
+    - target: {fileID: 340899909667202592, guid: 0f93607d3aa1313438bb91ad54b08ffb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 340899909667202592, guid: 0f93607d3aa1313438bb91ad54b08ffb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -867,22 +916,22 @@ PrefabInstance:
     - target: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
@@ -902,7 +951,7 @@ PrefabInstance:
     - target: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562725700649388605, guid: 0f93607d3aa1313438bb91ad54b08ffb,
         type: 3}
@@ -1147,7 +1196,8 @@ GameObject:
   - component: {fileID: 1193021677}
   - component: {fileID: 1193021680}
   - component: {fileID: 1193021679}
-  m_Layer: 8
+  - component: {fileID: 1193021678}
+  m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1168,6 +1218,17 @@ Transform:
   m_Father: {fileID: 65477718}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1193021678
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193021676}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 6
 --- !u!23 &1193021679
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1265,6 +1326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1277935234}
+  - component: {fileID: 1277935235}
   m_Layer: 0
   m_Name: Scene Elements
   m_TagString: Untagged
@@ -1288,6 +1350,20 @@ Transform:
   m_Father: {fileID: 1260162969839159243}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1277935235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277935233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cbf1b9e1e8f5804f96aad1ede05711f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Background: {fileID: 1851262159}
+  timer: {fileID: 1800896814}
 --- !u!198 &1448848461 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 2983168549640945882, guid: 0f93607d3aa1313438bb91ad54b08ffb,
@@ -1416,7 +1492,6 @@ Transform:
   - {fileID: 1551412259}
   - {fileID: 1800896813}
   - {fileID: 65477718}
-  - {fileID: 443190964}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1454,7 +1529,7 @@ MonoBehaviour:
   minVPercentOfMaxV: 0.33333334
   velocities:
   - {x: 3, y: 0}
-  - {x: 1, y: 300}
+  - {x: 2, y: 300}
   alphas:
   - {x: 1, y: 0}
   - {x: 0.3, y: 300}
@@ -1493,9 +1568,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 1800896814}
-  ball: {fileID: 1800896811}
   speed: 10
-  degree: 180
+  minSpeedTimer: 2
+  maxSpeedTimer: 5
+  minSpeed: 20
+  maxSpeed: 40
+  currentAngle: 0
 --- !u!1 &1851262159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,7 +1713,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2097513348}
   - component: {fileID: 2097513349}
-  - component: {fileID: 2097513350}
   m_Layer: 0
   m_Name: View Area
   m_TagString: Untagged
@@ -1706,20 +1783,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2097513350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097513347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cbf1b9e1e8f5804f96aad1ede05711f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Background: {fileID: 1851262159}
-  timer: {fileID: 1800896814}
 --- !u!1 &2112550167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,7 +1869,7 @@ Transform:
   m_GameObject: {fileID: 2112550167}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1.0000001, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1676988090}
   m_RootOrder: 2
