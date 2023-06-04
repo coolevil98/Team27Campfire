@@ -346,15 +346,15 @@ MonoBehaviour:
   - joining your friends in a deep slumber
   - now close your eyes
   introTextLength:
-  - 8
+  - 10
+  - 7
   - 7
   - 6
+  - 9
   - 6
   - 7
   - 7
-  - 5
-  - 5
-  - 5
+  - 10
   - 5
   - 5
   textDisplayTime: 8
