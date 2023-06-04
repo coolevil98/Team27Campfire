@@ -331,20 +331,31 @@ MonoBehaviour:
   introText: {fileID: 7808270588608495676}
   textHolder: {fileID: 8136966414540763034}
   introTextCollection:
-  - You are at a campsite on a secluded beach with your friends
-  - Sitting in a circle around the fire relaxing on reclined chairs
-  - Your tents surround you, lit up by the warm fire
-  - 'When you feel it''s time to get off your comfy camping recliner '
-  - and make your way to bed, please turn off and remove your headset
-  - And keep your eyes closed to avoid any unnecessary light exposure
-  - Now please close your eyes
+  - As twilight blankets the sky, you and your close friends find yourselves gathered
+    around a crackling fire
+  - on a secluded beach in the natural wonderland of Australia's east coast
+  - After an exhilarating day exploring the local fauna, exhaustion takes hold,
+  - and you all sink into a circle, mesmerized by dancing flames
+  - The rhythmic symphony of crashing waves and gentle crackle of embers lulls you
+    into a peaceful slumber
+  - rejuvenating your bodies for the adventures that await
+  - With a sense of gratitude and anticipation, you surrender to the embrace of sleep,
+  - cherishing the warmth of friendship and the tranquil beachside ambiance
+  - Please keep your eyes closed throughout the experience and keep them closed as
+    you remove and power off the headset
+  - joining your friends in a deep slumber
+  - now close your eyes
   introTextLength:
-  - 8
+  - 10
+  - 7
   - 7
   - 6
+  - 9
   - 6
   - 7
   - 7
+  - 10
+  - 5
   - 5
   textDisplayTime: 8
   lightSystem: {fileID: 0}
