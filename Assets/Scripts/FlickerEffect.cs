@@ -87,8 +87,9 @@ public class FlickerEffect : MonoBehaviour
         if (timer / randTimer > randTimes)
         {
             randTimes++;
-            speedMult = Random.Range(minSpeedMult, maxSpeedMult + 2); //+2 to make it more likely to be at higher speed
-            speedMult = Mathf.Clamp(speedMult, minSpeedMult, maxSpeedMult);
+            /*speedMult = Random.Range(minSpeedMult, maxSpeedMult + 2); //+2 to make it more likely to be at higher speed
+            speedMult = Mathf.Clamp(speedMult, minSpeedMult, maxSpeedMult);*/
+            speedMult = Random.Range(minSpeedMult, maxSpeedMult);
         }
     }
 
