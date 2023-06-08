@@ -832,6 +832,72 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: randomtalk1
+    sound: {fileID: 8300000, guid: 059cc4f4d5176224aa6ee643be006d91, type: 3}
+    volume: 0.515
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: randomtalk2
+    sound: {fileID: 8300000, guid: 6389954e72dc46c47a2724793bf38695, type: 3}
+    volume: 0.515
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: randomtalk3
+    sound: {fileID: 8300000, guid: 938e54faaad1bcc4da21ae170b7e2f84, type: 3}
+    volume: 0.515
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: randomtalk4
+    sound: {fileID: 8300000, guid: 376a09fd9be7d2c42b0f53ad4182268b, type: 3}
+    volume: 0.515
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: randomtalk5
+    sound: {fileID: 8300000, guid: 11573081ffbbf8a449d75c6690631ae7, type: 3}
+    volume: 0.515
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: randomtalk6
+    sound: {fileID: 8300000, guid: 9e957a254067a214cb0b5d6fc8cc2568, type: 3}
+    volume: 0.515
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: randomtalk7
+    sound: {fileID: 8300000, guid: e1530df64efe4ad47a7e32acce61e7ad, type: 3}
+    volume: 0.515
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: randomtalk8
+    sound: {fileID: 8300000, guid: d31cad79da8d016499a94cc0f7fe51d8, type: 3}
+    volume: 0.515
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: randomtalk9
+    sound: {fileID: 8300000, guid: 6c0b06ccb919eb445bdf066f44fb201a, type: 3}
+    volume: 0.515
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: randomtalk10
+    sound: {fileID: 8300000, guid: 0957e65c08267514fbd062afed395616, type: 3}
+    volume: 0.515
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: randomtalk11
+    sound: {fileID: 8300000, guid: 3378831c3f09ba148b26c57fbd38a60e, type: 3}
+    volume: 0.515
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   fireTimer: {fileID: 1800896814}
 --- !u!1 &836775627
 GameObject:
