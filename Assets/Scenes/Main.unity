@@ -1531,8 +1531,8 @@ MonoBehaviour:
   - {x: 3, y: 0}
   - {x: 2, y: 300}
   alphas:
-  - {x: 1, y: 0}
-  - {x: 0.3, y: 300}
+  - {x: 0.75, y: 0}
+  - {x: 0.25, y: 300}
   backgroundSprite: {fileID: 465664633}
 --- !u!114 &1800896815
 MonoBehaviour:
@@ -2646,7 +2646,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260162969913669308}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a32533f8b3bb8cd45aef7464fc33e24a, type: 3}
   m_Name: 
@@ -2661,7 +2661,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260162969913669308}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e72c81382cdeb8d4b95c183323eacd92, type: 3}
   m_Name: 
