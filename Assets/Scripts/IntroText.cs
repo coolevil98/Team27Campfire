@@ -65,7 +65,7 @@ public class IntroText : MonoBehaviour
                 lightSystem.GetComponent<DimFire>().FireStarted();
                 lightSystem.Play();
                 Destroy(textHolder);
-                FindObjectOfType<SSoundManager>().FadeCall("fireplaceholder", 0.005f, 0.6f);
+                FindObjectOfType<SSoundManager>().FadeCall("fireplaceholder", 0.005f, 1f);
                 FindObjectOfType<SSoundManager>().FadeCall("oceanplaceholder", 0.005f, 0.3f);
                 FindObjectOfType<SSoundManager>().FadeCall("windplaceholder", 0.005f, 0.2f);
             }

@@ -556,15 +556,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: fireplaceholder
-    sound: {fileID: 8300000, guid: 52b774b8946b37d40906234157a74344, type: 3}
-    volume: 0.3
+  - name: fire
+    sound: {fileID: 8300000, guid: db9ef0c6c7c22884ebaa882ce09d1032, type: 3}
+    volume: 0.6
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: oceanplaceholder
-    sound: {fileID: 8300000, guid: 0f0b79ff847110e4cbcae5adb3595299, type: 3}
-    volume: 0.15
+  - name: ocean
+    sound: {fileID: 8300000, guid: 909f0a0a35008834989c3dbb3fa5aaab, type: 3}
+    volume: 0.4
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -774,7 +774,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: windplaceholder
     sound: {fileID: 8300000, guid: 94f66cf4f19423146a4ca0a44902406c, type: 3}
-    volume: 0.1
+    volume: 0.05
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -797,20 +797,20 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: fireintro
-    sound: {fileID: 8300000, guid: 228f87be890dff342b04bc4012c01633, type: 3}
-    volume: 0.3
+    sound: {fileID: 8300000, guid: 7c35d0c717e372f42884c3cb2e833c87, type: 3}
+    volume: 0.6
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: oceanintro
-    sound: {fileID: 8300000, guid: aab405da7d665cf4da5d29d972abf073, type: 3}
-    volume: 0.15
+    sound: {fileID: 8300000, guid: 70dd8f03f31d5f34aa8fe9657abe09c2, type: 3}
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: windintro
     sound: {fileID: 8300000, guid: f717ae558ea325b4d9572bb5346b857a, type: 3}
-    volume: 0.1
+    volume: 0.05
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -864,13 +864,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: randomtalk6
     sound: {fileID: 8300000, guid: 9e957a254067a214cb0b5d6fc8cc2568, type: 3}
-    volume: 0.515
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: randomtalk7
     sound: {fileID: 8300000, guid: e1530df64efe4ad47a7e32acce61e7ad, type: 3}
-    volume: 0.515
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}

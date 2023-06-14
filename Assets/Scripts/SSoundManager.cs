@@ -2,7 +2,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
-public class  : MonoBehaviour
+public class SSoundManager : MonoBehaviour
 {
     public SecondarySound[] sounds;
     private bool stopIntro;
@@ -41,8 +41,8 @@ public class  : MonoBehaviour
             if(HasStopped("fireintro"))
             {
                 stopIntro = false;
-                Play("fireplaceholder");
-                Play("oceanplaceholder");
+                Play("fire");
+                Play("ocean");
                 Play("windplaceholder");
                 Play("cicadas");
             }
