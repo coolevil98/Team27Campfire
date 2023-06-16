@@ -10,20 +10,21 @@ using Liminal.SDK.VR.Input;
 public class IntroText : MonoBehaviour
 {
     #region Variables
+    [Header("Text")]
     public TMP_Text introText;
     public GameObject textHolder;
+    [Tooltip ("List of text used for introduction canvas")]
     public List<string> introTextCollection = new List<string>();
+    [Tooltip("List of times in seconds for each text in introTextCollection")]
     public List<float> introTextLength = new List<float>();
-    public float textDisplayTime;
-    private int currentText = 0;
-    private bool fadeOccur=true;
+    private float textDisplayTime; //current time till next text
+    private int currentText = 0; //Number for current text is displayed
+    private bool fadeOccur = true; //enable and disable fade of text
 
-    //
-    //assign 
+    [Header("Fire")]
     [Tooltip("Set particle system to not play on awake")]
     public ParticleSystem lightSystem;
     public GameObject fire;
-    public GameObject testing;
     #endregion
 
     void Awake()
