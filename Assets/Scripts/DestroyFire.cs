@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DestroyFire : MonoBehaviour
 {
-    //unused script, used with RandomFire to delete instantiated sprites
     void Start()
     {
         StartCoroutine(Delete());
