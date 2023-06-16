@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RandomFire : MonoBehaviour
 {
+    //unused script. Used to instantiate random black circles when pressing 'a', similar to pink rain.
     public GameObject[] FirePrefab;
 
     void Update()
