@@ -21,8 +21,10 @@ public class BallSize : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //check if ball is active
         if(ball.activeSelf == true)
         {
+            // change circle if timer is 0 if not then timer minus
             if (timer <= 0)
             {
                 NewSize();
@@ -36,13 +38,14 @@ public class BallSize : MonoBehaviour
         
     }
 
+    //change size of the ball
     public void NewSize()
     {
         newlocalSize.x = Random.Range(minSize, maxSize);
         newlocalSize.y = Random.Range(minSize, maxSize);
         timer = cooldown;
     }
-
+    //change size of the ball
     public void ChangeSize()
     {
         ball.transform.localScale = Vector3.SmoothDamp(ball.transform.localScale, newlocalSize, ref velocity, changeTimer);
