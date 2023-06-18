@@ -4,13 +4,14 @@ using UnityEngine;
 using System.Collections;
 public class SSoundManager : MonoBehaviour
 {
-    public SecondarySound[] sounds;
-    private bool stopIntro;
+    public SecondarySound[] sounds; //imports array of sound effects
+    private bool playIntro;
     public DimFire fireTimer;
     void Awake()
     {
         foreach (SecondarySound s in sounds)
         {
+            //loops through sound effect array, gives them each an audio source and assigns all audio parameters (i.e. volume, pitch, etc) set in the inspector to that audio source
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.sound;
             s.source.volume = s.volume;
@@ -31,16 +32,17 @@ public class SSoundManager : MonoBehaviour
         Play("randomtalk4");
         Play("randomtalk8");
         Play("randomtalk9");
-        stopIntro = true;
+        playIntro = true;
     }
 
     void Update(){
-        Debug.Log(fireTimer.getTimer);
-        if(stopIntro)
+        if(playIntro)
         {
+            //there are separate versions of the main sound tracks played for the first 15 seconds as they have a fade-in effect, and they aren't supposed to be looped. 
+            //Once those are finished, play the main version of those tracks, which are the ones that loop.
             if(HasStopped("fireintro"))
             {
-                stopIntro = false;
+                playIntro = false;
                 Play("fire");
                 Play("ocean");
                 Play("windplaceholder");
@@ -48,8 +50,8 @@ public class SSoundManager : MonoBehaviour
             }
         }
 
-        //system for determining what sound effect plays where. Once all the sound effects are at the right volume/right order, I might get rid of this and put all the sound effects
-        //into one continuous audio file so we don't have to have 1 billion if statements
+        //System for determining what sound effect plays where, based on how long the fire has been on. A window of 0.5s is given so that the sound actually starts during that time
+        //and doesn't try to play itself forever
         if(fireTimer.getTimer >= 5.0f && fireTimer.getTimer <= 5.5f){
             Play("Narration1");
         }
@@ -198,6 +200,7 @@ public class SSoundManager : MonoBehaviour
         }
     }
 
+    //function for playing a given audio clip
     public void Play(string name)
     {
         SecondarySound s = Array.Find(sounds, sound => sound.name == name);
@@ -207,6 +210,7 @@ public class SSoundManager : MonoBehaviour
         s.source.Play();
     }
 
+    //function that checks if an audio clip has stopped playing (only used for checking if the intro parts of main tracks have stopped)
     public bool HasStopped(string name)
     {
         SecondarySound s = Array.Find(sounds, sound => sound.name == name);
@@ -217,11 +221,14 @@ public class SSoundManager : MonoBehaviour
         }
     }
 
+    //function that allows the fade function to be accessed elsewhere in the code
     public void FadeCall(string name, float fadeSpeed, float maxVolume)
     {
         StartCoroutine(Fade(name, fadeSpeed, maxVolume));
     }  
 
+    //function that mimics a fading effect. A given audio clip is slowly increased in volume (fadeSpeed) until a given maxVolume is reached. This can also fade out (I think) if
+    //fadeSpeed is negative
     private IEnumerator Fade(string name, float fadeSpeed, float maxVolume)
     {
         SecondarySound s = Array.Find(sounds, sound => sound.name == name);

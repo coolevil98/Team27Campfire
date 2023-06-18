@@ -53,6 +53,7 @@ public class IntroText : MonoBehaviour
             currentText++;
             if(currentText == 1 && textDisplayTime <= 6f)
             {
+                //This method allows audio clips to be played outside of the SSoundManager script
                 FindObjectOfType<SSoundManager>().Play("laugh1");
             }
 
@@ -66,6 +67,8 @@ public class IntroText : MonoBehaviour
                 lightSystem.GetComponent<DimFire>().FireStarted();
                 lightSystem.Play();
                 Destroy(textHolder);
+                //This method allows audio clips to fade outside of the SSoundManager script
+                //If the intro text has finished, increase volume of main tracks by fading
                 FindObjectOfType<SSoundManager>().FadeCall("fireplaceholder", 0.005f, 1f);
                 FindObjectOfType<SSoundManager>().FadeCall("oceanplaceholder", 0.005f, 0.3f);
                 FindObjectOfType<SSoundManager>().FadeCall("windplaceholder", 0.005f, 0.2f);

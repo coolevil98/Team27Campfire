@@ -2,6 +2,7 @@
 using UnityEngine;
 
 [System.Serializable]
+//Each sound effect will have a name, AudioClip, volume, pitch, loop option and audio source, and these will be stacked into an Array for SSoundManager to use.
 public class SecondarySound
 {
     public string name;
