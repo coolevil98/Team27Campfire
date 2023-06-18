@@ -31,7 +31,7 @@ public class NumOfPart : MonoBehaviour
         emission.rateOverTime = emRate;
         FireParticleWithTimer();
     }
-
+    //Fire Events
     IEnumerator fireParticlesEmission()
     {
         //the 60 is for the intro

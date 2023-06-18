@@ -42,7 +42,9 @@ public class FlickerEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //get the timer 
         timer = timerScript.getTimer;
+        //turns on components 
         if (timer > 0)
         {
             ball.SetActive(true);
@@ -50,6 +52,7 @@ public class FlickerEffect : MonoBehaviour
         }
         if(turnOn == true)
         {
+            //change speed multiplers 
             if (speedsIndex < speedMults.Length)
             {
                 Speed();
@@ -65,12 +68,12 @@ public class FlickerEffect : MonoBehaviour
         //print(ballColor);
         BallFlash();
     }
-
+    //rotate the circle 
     public void RotateCircle()
     {
         transform.localEulerAngles = new Vector3(0, 0, Mathf.PingPong(pingPongTimer, degree)-90);
     }
-
+    //set the speed
     public void Speed()
     {
         minSpeedMult = speedMults[speedsIndex - 1].x + (speedMults[speedsIndex].x - speedMults[speedsIndex - 1].x) * (timer - speedMults[speedsIndex - 1].z) / timeDif;
@@ -81,7 +84,7 @@ public class FlickerEffect : MonoBehaviour
             speedsIndex++;
         }
     }
-
+    //the multipler of the speed
     public void SetSpeedMult()
     {
         if (timer / randTimer > randTimes)

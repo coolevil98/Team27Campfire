@@ -24,15 +24,18 @@ public class FireRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Turn the fire rotation on if intro is finish
         if (timer.getTimer > 0)
         {
             turnOn = true;
         }
+
         if (turnOn == true)
         {
+            //fire rotation
             if(cooldown <= 0)
             {
+                //change speed for fire on random times
                 cooldown = Random.Range(minSpeedTimer, maxSpeedTimer);
                 speed = Random.Range(minSpeed, maxSpeed);
             }
@@ -46,6 +49,7 @@ public class FireRotation : MonoBehaviour
 
     }
 
+    //Rotate circle function
     public void newRotateCircle()
     {
         if (currentAngle >= 0)

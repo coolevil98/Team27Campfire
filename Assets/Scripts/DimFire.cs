@@ -36,11 +36,13 @@ public class DimFire : MonoBehaviour
     
     void Start()
     {
+        //gets the particles
         emberParticles = gameObject.GetComponent<ParticleSystem>();
         var main = emberParticles.main;
         main.startSpeed = new ParticleSystem.MinMaxCurve(velocities[velocitiesIndex].x * minVPercentOfMaxV, velocities[velocitiesIndex].x);
         main.startColor = emberColour;
 
+        //changes the colour
         velTimerDif = velocities[velocitiesIndex + 1].y - velocities[velocitiesIndex].y;
         velocitiesIndex++;
 
@@ -93,6 +95,7 @@ public class DimFire : MonoBehaviour
 
     }
 
+    //gets the velocity
     public void Velocity()
     {
         vel = velocities[velocitiesIndex - 1].x + (velocities[velocitiesIndex].x - velocities[velocitiesIndex - 1].x) * (timer - velocities[velocitiesIndex - 1].y) / velTimerDif;
@@ -109,6 +112,7 @@ public class DimFire : MonoBehaviour
         main.startSpeed = new ParticleSystem.MinMaxCurve(vel * minVPercentOfMaxV, vel);
     }
 
+    //changes the alphas
     public void Transparency()
     {
         alpha = alphas[alphasIndex - 1].x + (alphas[alphasIndex].x - alphas[alphasIndex - 1].x) * (timer - alphas[alphasIndex - 1].y) / alphasDif;
