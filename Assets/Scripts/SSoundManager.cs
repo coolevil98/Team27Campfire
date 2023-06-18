@@ -24,7 +24,7 @@ public class SSoundManager : MonoBehaviour
     void Start(){
         Play("fireintro");
         Play("oceanintro");
-        Play("windintro");
+        Play("wind");
         Play("introchatter");
         Play("introchatter2");
         Play("randomtalk1");
@@ -40,12 +40,12 @@ public class SSoundManager : MonoBehaviour
         {
             //there are separate versions of the main sound tracks played for the first 15 seconds as they have a fade-in effect, and they aren't supposed to be looped. 
             //Once those are finished, play the main version of those tracks, which are the ones that loop.
+            //Cicadas are started here so they don't start immediately
             if(HasStopped("fireintro"))
             {
                 playIntro = false;
                 Play("fire");
                 Play("ocean");
-                Play("windplaceholder");
                 Play("cicadas");
             }
         }

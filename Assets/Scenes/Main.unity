@@ -558,7 +558,7 @@ MonoBehaviour:
   sounds:
   - name: fire
     sound: {fileID: 8300000, guid: db9ef0c6c7c22884ebaa882ce09d1032, type: 3}
-    volume: 0.6
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -772,15 +772,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: windplaceholder
-    sound: {fileID: 8300000, guid: 94f66cf4f19423146a4ca0a44902406c, type: 3}
-    volume: 0.05
+  - name: wind
+    sound: {fileID: 8300000, guid: 41aa8779f92cc004e99e81744f97a496, type: 3}
+    volume: 0.25
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: cicadas
-    sound: {fileID: 8300000, guid: 7d613a98de85aa54a96a11aeeb2e1838, type: 3}
-    volume: 0.9
+    sound: {fileID: 8300000, guid: 4ba6d0d43333ee74f8b9ce846cc6de56, type: 3}
+    volume: 0.47
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -798,19 +798,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: fireintro
     sound: {fileID: 8300000, guid: 7c35d0c717e372f42884c3cb2e833c87, type: 3}
-    volume: 0.6
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: oceanintro
     sound: {fileID: 8300000, guid: 70dd8f03f31d5f34aa8fe9657abe09c2, type: 3}
     volume: 0.4
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: windintro
-    sound: {fileID: 8300000, guid: f717ae558ea325b4d9572bb5346b857a, type: 3}
-    volume: 0.05
     pitch: 1
     loop: 0
     source: {fileID: 0}
